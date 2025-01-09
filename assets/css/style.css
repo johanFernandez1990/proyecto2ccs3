@@ -1,5 +1,6 @@
 /* variables */
 :root{
+    --mx-width:1320px;
     --color-text-body: #525260;
     --color-primary: #5956e9;
     --color-secondary: #ffffff;
@@ -7,8 +8,13 @@
     --color-text-btn: #0d6efd;
     --color-bg-btn:#ffdc60;
     --color-subtitle:#c75c6f;
-    --color-title:# #000000;
+    --color-title:#000000;
     --color-bg-services:#f8f8f8;
+    --color-bg-projects:#ecf2f6;
+    --color-bg-dark:#27272E;
+    --color-description:#99a1aa;
+    --color-hover-dark:#303035;
+
 }
 //ESTILOS GENERALES//
 html{
@@ -33,6 +39,7 @@ body{
     width:100%;
     min-width:1200px;
     height:100%;
+    
 }
 
 /* ESTILOS MENU NAVEGACION */
@@ -40,9 +47,9 @@ body{
     width:100%;
     padding-top:3.5rem;
     padding-bottom: 3.5rem;
-    padding-left:3rem;
-    padding-right: 3rem;
-
+    padding-left:1.5rem;
+    padding-right: 1rem;
+    
 }
 
 .menu__navbar{
@@ -50,6 +57,7 @@ body{
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
+    
 }
 
 .navbar__logo{
@@ -65,7 +73,7 @@ body{
 
 .nav__item{
     position:relative;
-    margin:0 2.4rem;
+    margin:0 3.3rem;
 }
 
 .nav__submenu{
@@ -143,7 +151,7 @@ body{
 .submenu__title{
     display:block;
     position:relative;
-    font-size:1.5rem;
+    font-size:1.2rem;
     text-transform: capitalize;
 
     text-decoration:none;
@@ -367,16 +375,18 @@ body{
 .layout__services{
     position:relative;
     z-index:1;
-    border:1px solid red;
-    margin:5rem 4rem;
+    margin:14rem 10rem;
+    margin-bottom:6rem;
 }
 .services__grid{
-    max-width:1320px;
+    max-width:var(--mx-width);
     margin:0 auto;
+    
 }    
 .services__header{
     text-align:left;
     margin-bottom:2rem;
+    
 }
 .services__subtitle{
     color:var( --color-subtitle);
@@ -385,7 +395,10 @@ body{
     margin-bottom:1.5rem;
 
 }
-.services__title{
+.services__title,
+.projects__title,
+.stats__title
+{
     color:var( --color-title);
     font-size:6.7rem;
     line-height:1.2;
@@ -399,8 +412,9 @@ body{
 
 .services__service{
     width:33%;
+    height:100%;
     padding:5rem 2rem;
-    padding-bottom:3rem;
+    
     border-radius:3rem;
     margin-bottom:4rem;
     background:linear-gradient(180deg, #f8f8f8, rgba(255, 255, 255, 0));
@@ -425,6 +439,7 @@ body{
 }
 
 .service__title{
+    color:var(--color-title);
     font-size:1.4rem;
     font-weight:500;
     line-height:1.8rem;
@@ -461,3 +476,200 @@ body{
 .service__more:hover::before{
     background-color:var(--color-primary);
 }
+/* /* ESCALONADO DE LAS TARJETAS DE SRERVICIOS */
+.services__service--bottom{
+    margin-top:20rem;
+}
+.services__service--middle{
+    margin-top:10rem;
+}
+.services__service--top{
+    margin-top:0rem;
+}
+/* FORMAS DETRAS DE LOS SERVICIOS  */
+.service-shapes__item{
+    position:absolute;
+    z-index:-1;
+    pointer-event:none;
+}
+.service-shapes--shape1{
+    top:7%;
+    right:12%;
+}
+.service-shapes--shape2{
+    top:20%;
+    left:56%;
+}
+.service-shapes--shape3{
+   top:40%;
+   left:16%; 
+}
+/* ESTILOS DE PROYECTOS */
+.layout__projets{
+    position:relative;
+    z-index:1;
+    background-color:var(--color-bg-projects);
+    padding:14rem 10rem;
+   
+}
+.projects__grid{
+   max-width:var(--mx-width);
+   margin:0 auto;
+}
+.projects__header{
+    margin-bottom:4rem;
+}
+.projects__subtitle,
+.stats__subtitle{
+    color:var(--color-subtitle);
+    font-size:2rem;
+    font-weight:500;
+    text-align:left;
+    margin-bottom:1.5rem;
+    text-transform:capitalize;
+} 
+.projects__categories{
+    margin-bottom:5.5rem;
+    display:flex;
+    flex-direction:row;
+    gap:7rem;
+}
+.categories__item{
+    position:relative;
+    font-size:1.4rem;
+    font-weight:500;
+    cursor:pointer;
+    padding:0.8rem 0;
+}
+.categories__item--active,
+.categories__item:hover{
+    border-bottom:3px solid var(--color-primary);
+    transition:all 150ms ease-in-out;
+}
+.projects__all{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:4rem 6rem;
+}
+.project__container-img{
+    width:100%;
+    border-radius:30px 30px 0 0;
+    overflow:hidden;
+
+}
+.project__img{
+    width:100%;
+    transition:all 600ms ease-in-out;
+}
+.projects__project:hover .project__img{
+    transform:scale(1.2);
+}
+.project__content{
+    background-color:var(--color-secondary);
+    padding:4rem 5rem;
+    border-radius:0 0 30px 30px;
+}
+.project__title{
+    font-size:2.2rem;
+    line-height:1.2;
+    margin-bottom:1rem;
+    font-weight:500;
+    color:var(--color-title);
+    transition:all 300ms ease-in-out;
+}
+.project__title:hover{
+    color:var(--color-banner);
+}
+.project__tags{
+    font-size:1.7rem;
+}
+.project-shapes__item{
+    position:absolute;
+    z-index:-1;
+    pointe-events:none;
+
+    
+}
+.project-shapes--shape1{
+    right:6%;
+    top:10%;
+}
+.project-shapes--shape2{
+    top:13%;
+    right:25%;
+}
+.project-shapes--shape3{
+    top:44%;
+    left:13%;
+}
+/* ESTILOS PARA ESTADISTICAS */
+.layout__stats{
+    background-color:var(--color-bg-dark);
+    padding:14rem 11rem;
+}
+.stats__container{
+    max-width:var(--mx-width);
+    margin:0 auto;
+
+}
+.stats__header{
+    text-align:center;
+}
+.stats__subtitle{
+    text-align:center; 
+}
+.stats__title{
+    color:var(--color-secondary);
+    font-size:5rem;
+    margin-bottom:3rem;
+}
+.stats__description{
+    font-size:1.8rem;
+    width:80%;
+    margin:0 auto 4rem;
+    color:var(--color-description);
+}
+.stats__progress{
+    display:flex;
+    flex-direction:row;
+    gap:3rem;
+}
+.stats__stat{
+    width:25%;
+    text-align:center;
+    padding:7rem 2rem;
+    border-radius:2rem;
+    border:1px solid transparent;
+}
+.stats__stat:hover{
+    background:linear-gradient(180deg, var(--color-bg-dark),var(--color-hover-dark));
+    border:1px solid var(--color-hover-dark);
+}
+.stat__icon{
+    margin-bottom:2rem;
+}
+    
+    
+.stat__icon>img{
+    display:inline-block;
+    margin:0 auto;
+    text-align:center;
+}
+.stat__count{
+    display:inline-block;
+    font-size:4rem;
+    font-weight:500;
+    color:var(--color-primary);
+    line-height:1.2;
+    margin-bottom:0.8rem;
+    text-align:center;
+}
+.stat__title{
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:500;
+    line-height:1.2;
+    color:var(--color-secondary);
+}
+    
