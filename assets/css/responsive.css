@@ -105,6 +105,7 @@
     }
 
 }
+
 /* REVISAR EN 1096 */
 @media(max-width:1199px){
     .layout{
@@ -187,8 +188,9 @@
             top:15%;
         }
         .project__content{
-            padding: 4rem 4rem;
+            padding: 4rem 2rem;
         }
+        
         .project__tags {
             font-size: 0.8rem;
         }
@@ -286,10 +288,127 @@
             text-align:center;
             justify-content:center;
         }
+}  
+@media(max-width:780px){
+    .layout__banner{
+        padding:8rem 3rem;
+        margin:0 3rem;
+    }
+    .banner__title{
+        font-size:3rem;
+    }
+    .layout__services{
+        margin:7rem 7rem;
+    }
+           /* .services__grid, */
+    /* .projects__grid, */
+    .reviews__grid,
+    /* .contact__container, */
+    /* .stats__container, */
+    .clients__container,
+    .news__container,
+    .footer__container{
+        max-width:54rem;
+    }
+    .projects__subtitle,
+    .stats__subtitle,
+    .reviews__subtitle,
+    .contact__subtitle
+    {
+        font-size: 2rem;
+    }
+    .services__title, 
+    .projects__title, 
+    .stats__title, 
+    .reviews__title, 
+    .news__title,
+    .contact__title{
+        font-size: 3rem;
+    }
+    .layout__projets{
+        padding:6rem 3rem;;
+    }
+    .projects__all{
+        flex-direction:column;
+    }
+    .projects__project{
+        width:100%;
+    }
+    .layout__stats, .layout__clients {
+        padding: 6rem 1rem;
+    }  
+    .stat__count {
+      
+        font-size: 2rem;
+    }
+    .layout__reviews{
+        padding-top:6rem;
+        padding-bottom:3rem;
+    }
+    .reviews__review {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    .layout__news {
+        padding: 3rem;
+    }
+    .new__title {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+    .layout__contact {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    .layout__contact::before {
+        height: 35rem;
+    }
+    .contact__thumb--chat{
+        margin-right:-28rem;
+        margin-bottom:-0.8rem;
+        width:100%;
+    }
+    .contact__thumb--laptop{
+        left:7rem;
+        bottom:0;
+    }
+    .contact__thumb--mobile{
+        right:-3rem;
+    }
+    .contact__img{
+        width:35%;
+    }
+
+    .projects__categories {
+        gap: 4rem;
+    }
+    .categories__item {
+        
+        font-size: 1rem;
+  
+    }
+    .fleft__container {
+        border-right: 1px solid var(--color-description);
+        padding-right: 8rem;
+        margin-bottom: 8rem;
+        width:100%;
+    }
+       
+    .news__new{
+        flex-direction:column;
+    }
+    .new__container-img{
+        width:100%;
+    }
+    .new__img{
+        width:100%;
+    }
+}   
+
 
             
 
-}   
+
             
             
          
@@ -297,6 +416,3 @@
 
            
      
-
-
-
